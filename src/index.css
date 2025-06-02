@@ -3,6 +3,9 @@ body {
   background-color: rgb(24, 24, 24);
   color: white;
 }
+html{
+  scroll-behavior: smooth;
+}
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
@@ -23,6 +26,7 @@ body {
 .border-o{
   border: 2px solid orange;
 }
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
