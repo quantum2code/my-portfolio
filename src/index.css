@@ -27,6 +27,13 @@ html{
   border: 2px solid orange;
 }
 
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 100px;
+}
+::-webkit-scrollbar-track{
+  background: rgba(1, 1, 1, 0.011);
+}
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
