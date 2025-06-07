@@ -34,19 +34,22 @@ function Sections({ sectionRefs }) {
       });
     };
   }, [sectionRefs]);
+
+  
   return (
-    <div className="fixed bottom-[10rem] flex flex-col h-[10rem] justify-between m-0 pl-[3rem] border-r">
+    <div className="flex flex-col h-[10rem] justify-between m-0">
       {sections.map((sec, index) => (
-        <h1
+        <a
           key={index}
-          className={`text-[20px] p-0 transition-transform origin-left duration-250 ease-in-out ${
+          href={`#sec${index+1}`}
+          className={`text-[18px] font-extralight p-0 transition-transform origin-left duration-250 ease-in-out ${
             visibleSec === index
-              ? "font-semibold scale-120 opacity-100"
-              : "opacity-60 scale-100"
+              ? " scale-120 text-gray-50"
+              : "text-gray-400 scale-100"
           }`}
         >
-          {sec}
-        </h1>
+          {`${sec}`}
+        </a>
       ))}
     </div>
   );

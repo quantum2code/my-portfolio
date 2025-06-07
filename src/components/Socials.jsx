@@ -1,39 +1,51 @@
-import GithubLogo from "../assets/github-logo-line.svg?react";
-import LinkedinLogo from "../assets/linkedin-logo.svg?react";
-import TwitterLogo from "../assets/twitter-logo-line.svg?react";
-import FigmaLogo from "../assets/figma-logo.svg?react";
+import { FiGithub } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFigma } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import React from "react";
+
+
+// const iconSize = 40
+
 
 const socials = [
   {
     siteName: "Github",
-    logo: <GithubLogo />,
-    link: "#",
+    logo: <FiGithub size={30}/>,
+    link: "https://github.com/quantum2code",
   },
   {
       siteName: "X",
-      logo: <TwitterLogo />,
-      link: "#",
+      logo: <FaXTwitter size={30}/>,
+      link: "https://x.com/QuantumCode21",
     },
     {
         siteName: "Figma",
-        logo: <FigmaLogo />,
+        logo: <FaFigma size={30}/>,
         link: "#",
     },
-    // {
-    //   siteName: "Linkedin",
-    //   logo: <LinkedinLogo />,
-    //   link: "#",
-    // },
+    {
+      siteName: "Linkedin",
+      logo: <CiLinkedin size={40}/>,
+      link: "https://www.linkedin.com/in/supriyo-purkait-7978941ab/",
+    },
 ];
 
 function Socials() {
   return (
-    <div className="fixed bottom-[4rem] [@media(max-height:650px)]:hidden flex h-[10%] w-full gap-[1rem] pl-[3rem] justify-start items-center">
-      {socials.map((social, index) => (
-        <div key={index} className="w-[50px] h-fill">
-          {social.logo}
-        </div>
-      ))}
+    <div className="[@media(max-height:650px)]:hidden flex h-[3rem] w-full gap-[0.5rem] pl-[1rem] justify-start items-center">
+      {
+        socials.map((social)=>(
+          <a
+          key={social.siteName}
+          href={social.link}
+          rel="noopener noreferrer"
+          aria-label={social.siteName}
+          >
+            {React.cloneElement(social.logo,{color:"#aaaaaa"})}
+          </a>
+        ))
+      }
     </div>
   );
 }
