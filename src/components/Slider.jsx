@@ -2,8 +2,8 @@ import React from "react";
 
 function Slider({ scrollY }) {
   return (
-    <div className="w-[8%] relative mt-[18px]">
-      <div className="h-[calc(50%-20px)] w-full relative top-0">
+    <div className="w-[2rem] h-[calc(10rem+10rem-20px)] fixed bottom-0">
+      <div className="h-[calc(10rem-35px)] w-full relative top-0">
         <div
           className="absolute left-[50%] rounded-[100%] bg-white w-[12px] h-[12px] translate-[-50%] z-10"
           style={{ top: `${scrollY}%` }}

@@ -2,7 +2,21 @@
 body {
   background-color: rgb(24, 24, 24);
   color: white;
+  padding: 0;
+  margin: 0;
 }
+
+:root {
+  --color-hades-gradient: linear-gradient(90deg,rgba(192, 250, 216, 0.99) 0%, rgba(102, 222, 108, 1) 14%, rgba(31, 200, 219, 1) 28%, rgba(227, 109, 217, 1) 44%, rgba(170, 211, 105, 1) 64%, rgba(51, 179, 212, 1) 80%, rgba(237, 221, 83, 1) 87%);
+}
+
+.gradient {
+  background: linear-gradient(90deg,rgba(192, 250, 216, 0.99) 0%, rgba(102, 222, 108, 1) 14%, rgba(31, 200, 219, 1) 28%, rgba(227, 109, 217, 1) 44%, rgba(170, 211, 105, 1) 64%, rgba(51, 179, 212, 1) 80%, rgba(237, 221, 83, 1) 87%);
+}
+
+/* *{
+  padding: 0;
+} */
 html{
   scroll-behavior: smooth;
 }
@@ -25,6 +39,10 @@ html{
 }
 .border-o{
   border: 2px solid orange;
+}
+
+hero-dim-text {
+  opacity: 50;
 }
 
 ::-webkit-scrollbar {
