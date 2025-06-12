@@ -21,7 +21,7 @@ function Sections({ sectionRefs }) {
       {
         root: null,
         rootMargin: "0px",
-        threshold: [0.2,1],
+        threshold: [0.3],
       }
     );
     sectionRefs.current.forEach((section) => {

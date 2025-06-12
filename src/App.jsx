@@ -47,11 +47,18 @@ function App() {
               addChips={chipsConstructor(techStackObj.lang)}
               addJSX={
                 <div className="flex m-2 gap-2">
-                {chipsConstructor(techStackObj.utils)}
+                  {chipsConstructor(techStackObj.utils)}
                 </div>
               }
             />
-            <Card title={"Interests"} />
+            <Card title={"Interests"} 
+            
+              addJSX={
+                <div className="h-[7rem] flex items-center justify-center text-gray-600">
+                  Wow so empty...
+                </div>
+              }
+            />
           </div>
           <div
             id="sec2"
@@ -61,24 +68,25 @@ function App() {
             <Card
               title={"Projects"}
               addJSX={
-                <div className="h-[10rem] flex items-center justify-center text-gray-600">
+                <div className="h-[30rem] flex items-center justify-center text-gray-600">
                   Wow so empty...
                 </div>
               }
             />
-            <Card />
-            <Card />
-            <Card />
           </div>
           <div
             id="sec3"
             ref={(el) => (sectionRefs.current[2] = el)}
             className="flex flex-col gap-[23px]"
           >
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <Card title={"Experiences"}
+            
+              addJSX={
+                <div className="h-[7rem] flex items-center justify-center text-gray-600">
+                  Wow so empty...
+                </div>
+              }
+            />
           </div>
         </div>
       </div>
