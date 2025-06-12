@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const sections = ["About me", "Projects", "Experiences"];
 
-function Sections({ sectionRefs }) {
+function Sections({ sectionRefs , animationEnabled = false}) {
   const [visibleSec, setVisibleSec] = useState(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,7 +43,7 @@ function Sections({ sectionRefs }) {
           key={index}
           href={`#sec${index+1}`}
           className={`text-[18px] font-extralight p-0 transition-transform origin-left duration-250 ease-in-out ${
-            visibleSec === index
+            visibleSec === index && animationEnabled
               ? " scale-120 text-gray-50"
               : "text-gray-400 scale-100"
           }`}
