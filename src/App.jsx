@@ -2,6 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import Card from "./components/Card";
 import HeroHeading from "./components/HeroHeading";
 import BottomSection from "./components/BottomSection";
+import Chips from "./components/Chips";
+import { chipsConstructor } from "./utils/chipsConstructor";
+
+const techStackObj = {
+  lang: ["javascript", "React.js", "node.js"],
+  utils: ["Vim", "Linux"],
+};
 
 function App() {
   const sectionRefs = useRef([]);
@@ -26,18 +33,39 @@ function App() {
             ref={(el) => (sectionRefs.current[0] = el)}
             className="flex flex-col gap-[23px] pt-[90px]"
           >
-            <Card hideTitle={true} content={"I'm a 19 y/o cs undergrad student with interest sapning in Web dev, Computer Graphics and Game engine, UI design and Digital painting. Glued to my terminal since 2020, learning exploring vast world of software dev"}/>
+            <Card
+              hideTitle={true}
+              content={
+                "I'm a 19 y/o cs undergrad student with interests in Web dev, Computer Graphics and Game engine, UI design and Digital painting. Glued to the terminal since 2020, learning and exploring vast world of software dev"
+              }
+            />
 
-            <Card title={"Tech Stack"} hideContent={true} hideChips={false}/>
-            <Card />
-            <Card />
+            <Card
+              title={"Tech Stack"}
+              hideContent={true}
+              hideChips={false}
+              addChips={chipsConstructor(techStackObj.lang)}
+              addJSX={
+                <div className="flex m-2 gap-2">
+                {chipsConstructor(techStackObj.utils)}
+                </div>
+              }
+            />
+            <Card title={"Interests"} />
           </div>
           <div
             id="sec2"
             ref={(el) => (sectionRefs.current[1] = el)}
             className="flex flex-col gap-[23px]"
           >
-            <Card />
+            <Card
+              title={"Projects"}
+              addJSX={
+                <div className="h-[10rem] flex items-center justify-center text-gray-600">
+                  Wow so empty...
+                </div>
+              }
+            />
             <Card />
             <Card />
             <Card />
