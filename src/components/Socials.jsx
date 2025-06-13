@@ -33,7 +33,7 @@ const socials = [
 
 function Socials() {
   return (
-    <div className="[@media(max-height:650px)]:hidden flex h-[3rem] w-full gap-[0.5rem] pl-[1rem] justify-start items-center">
+    <div className="flex h-[3rem] w-full gap-[0.5rem] sm:pl-[1rem] justify-start items-center">
       {
         socials.map((social)=>(
           <a
@@ -42,7 +42,7 @@ function Socials() {
           rel="noopener noreferrer"
           aria-label={social.siteName}
           >
-            {React.cloneElement(social.logo,{color:"#aaaaaa"})}
+            {React.cloneElement(social.logo,{color:"#99a1af"})}
           </a>
         ))
       }

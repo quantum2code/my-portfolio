@@ -4,7 +4,7 @@ import { GoLocation } from "react-icons/go";
 
 function HeroHeading() {
   return (
-    <div className="flex flex-col items-start w-full pt-[75px]">
+    <div className="flex flex-col items-start sm:w-full pt-[10rem] sm:pt-[75px]">
       {/* <h1 className="text-[30px] text-gray-500">I'm</h1> */}
       <h1 className="text-[35px] mb-1 font-semibold">Supriyo Purkait</h1>
       <div className="flex gap-1 py-1 text-gray-500 items-center">

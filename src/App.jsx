@@ -5,6 +5,7 @@ import BottomSection from "./components/BottomSection";
 import Chips from "./components/Chips";
 import { chipsConstructor } from "./utils/chipsConstructor";
 
+const mobileSceenLogic = "[@media(min-height:650px)]";
 const techStackObj = {
   lang: ["javascript", "React.js", "node.js"],
   utils: ["Vim", "Linux"],
@@ -15,23 +16,23 @@ function App() {
 
   return (
     <>
-      <div className="flex mx-[4rem]">
-        <div className="h-screen w-[max(40%,30rem)]">
-          <div className=" fixed flex gap-4 text-gray-400 text-[15px] mt-3">
+      <div className="flex flex-col mx-[2rem] sm:flex-row sm:mx-[4rem] gap-[4rem]">
+        <div className="sm:h-screen sm:w-[max(40%,20rem)]">
+          <div className={`hidden sm:fixed sm:flex gap-4 text-gray-400 text-[15px] mt-3`}>
             <a>{`home [h]`}</a>
             <a>{`projects [p]`}</a>
             <a>{`gallery [g]`}</a>
           </div>
-          <div className="fixed h-full flex flex-col justify-between gap-[1rem]">
+          <div className={`sm:fixed h-full flex flex-col justify-between gap-[1rem]`}>
             <HeroHeading />
             <BottomSection sectionRefs={sectionRefs} />
           </div>
         </div>
-        <div className="w-[60%] gap-1 flex flex-col h-fit">
+        <div className="sm:w-[60%] gap-1 flex flex-col h-fit">
           <div
             id="sec1"
             ref={(el) => (sectionRefs.current[0] = el)}
-            className="flex flex-col gap-[23px] pt-[90px]"
+            className="flex flex-col gap-[23px] sm:pt-[90px]"
           >
             <Card
               hideTitle={true}
@@ -87,6 +88,9 @@ function App() {
                 </div>
               }
             />
+          </div>
+          <div className="h-[10rem] text-gray-600 flex items-center justify-center">
+            {":)"}
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ function Slider() {
 
 
   return (
-    <div className="w-[2rem] relative left-[-0.5rem]">
+    <div className="w-[2rem] relative left-[-0.5rem] hidden sm:block">
       <div className="h-[calc(10rem-30px)] w-full relative top-[17px]">
         <div
           className="absolute left-[50%] rounded-[100%] bg-gray-400 w-[12px] h-[12px] translate-[-50%] z-10"
