@@ -37,7 +37,7 @@ function App() {
             <Card
               hideTitle={true}
               content={
-                "I'm a 19 y/o cs undergrad student with interests in Web dev, Computer Graphics and Game engine, UI design and Digital painting. Glued to the terminal since 2020, learning and exploring vast world of software dev"
+                "I'm a cs undergrad student with interests in Web dev, Computer Graphics and Game engine, UI design and Digital painting. Glued to the terminal since 2020, learning and exploring vast world of software dev"
               }
             />
 
