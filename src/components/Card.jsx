@@ -20,7 +20,10 @@ function Card({
       <p hidden={hideContent} className="p-1 pt-0 text-gray-300">
         {content}
       </p>
-      <div hidden={hideChips} className="flex-wrap flex h-full gap-2 m-2">
+      <div
+        hidden={hideChips}
+        className="w-full flex flex-wrap h-full gap-2 m-2"
+      >
         {addChips}
       </div>
       {addJSX}

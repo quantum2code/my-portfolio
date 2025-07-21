@@ -23,13 +23,13 @@ function App() {
     <>
       <div className="flex flex-col mx-[2rem] sm:flex-row sm:mx-[4rem] gap-[4rem]">
         <div className="sm:h-screen sm:w-[max(40%,20rem)]">
-          <div
+          {/* <div
             className={`hidden sm:fixed sm:flex gap-4 text-gray-400 text-[15px] mt-3`}
           >
             <a>{`about [h]`}</a>
             <a>{`projects [p]`}</a>
-            {/* <a>{`gallery [g]`}</a> */}
-          </div>
+            <a>{`gallery [g]`}</a>
+          </div> */}
           <div
             className={`sm:fixed h-full flex flex-col justify-between gap-[1rem]`}
           >
@@ -57,10 +57,10 @@ function App() {
               addChips={chipsConstructor(techStackObj.lang)}
               addJSX={
                 <div className="grid m-2 gap-2">
-                  <div className="flex">
+                  <div className="flex flex-wrap gap-2">
                     {chipsConstructor(techStackObj.library)}
                   </div>
-                  <div className="flex">
+                  <div className="flex flex-wrap gap-2">
                     {chipsConstructor(techStackObj.utils)}
                   </div>
                 </div>

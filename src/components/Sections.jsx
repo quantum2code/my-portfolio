@@ -13,7 +13,6 @@ function Sections({ sectionRefs, animationEnabled = true }) {
           if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
             maxRatio = entry.intersectionRatio;
             maxIndex = sectionRefs.current.indexOf(entry.target);
-            console.log("intersecting: ", sections[maxIndex]);
           }
         });
         if (maxIndex !== null) setVisibleSec(maxIndex);
@@ -21,7 +20,7 @@ function Sections({ sectionRefs, animationEnabled = true }) {
       {
         root: null,
         rootMargin: "0px",
-        threshold: [0.2],
+        threshold: [0.3],
       }
     );
     sectionRefs.current.forEach((section) => {
@@ -36,14 +35,14 @@ function Sections({ sectionRefs, animationEnabled = true }) {
   }, [sectionRefs]);
 
   return (
-    <div className="w-[90%] fixed left-1/2 translate-x-[-50%] sm:translate-x-0 top-3 sm:static flex sm:flex-col sm:h-[10rem] justify-between backdrop-blur-xl rounded-xl">
+    <div className="w-[95%] fixed left-1/2 translate-x-[-50%] sm:translate-x-0 top-3 sm:static flex sm:flex-col  justify-between sm:px-0 px-3 sm:h-[11rem] backdrop-blur-xl sm:backdrop-blur-0 rounded-xl">
       {sections.map((sec, index) => (
         <a
           key={index}
           href={`#sec${index + 1}`}
-          className={`sm:text-[18px] font-extralight p-2 transition-transform origin-left duration-250 ease-in-out ${
+          className={`sm:text-xl text-sm font-extralight p-2 transition-transform sm:origin-left origin-center duration-250 ease-in-out ${
             visibleSec === index && animationEnabled
-              ? " scale-120 text-gray-50"
+              ? " scale-110 text-gray-50"
               : "text-gray-400 scale-100"
           }`}
         >

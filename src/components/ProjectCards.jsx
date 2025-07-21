@@ -19,7 +19,7 @@ const ProjectCards = ({ username, repoName }) => {
       <a href={repo.repoUrl} className="text-neutral-400">
         <h1 className="font-bold text-xl">{repo.name}</h1>
       </a>
-      <div className="flex">
+      <div className="flex flex-wrap gap-2">
         {languages.map((lang) => (
           <Chips key={lang} content={lang} />
         ))}
