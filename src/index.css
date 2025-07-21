@@ -55,6 +55,14 @@ hero-dim-text {
 ::-webkit-scrollbar-track{
   background: rgba(1, 1, 1, 0.011);
 }
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

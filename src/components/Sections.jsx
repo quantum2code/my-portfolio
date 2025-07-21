@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const sections = ["About me", "Projects", "Experiences"];
 
-function Sections({ sectionRefs , animationEnabled = false}) {
+function Sections({ sectionRefs, animationEnabled = true }) {
   const [visibleSec, setVisibleSec] = useState(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,7 +21,7 @@ function Sections({ sectionRefs , animationEnabled = false}) {
       {
         root: null,
         rootMargin: "0px",
-        threshold: [0.3],
+        threshold: [0.2],
       }
     );
     sectionRefs.current.forEach((section) => {
@@ -35,13 +35,12 @@ function Sections({ sectionRefs , animationEnabled = false}) {
     };
   }, [sectionRefs]);
 
-  
   return (
     <div className="w-[90%] fixed left-1/2 translate-x-[-50%] sm:translate-x-0 top-3 sm:static flex sm:flex-col sm:h-[10rem] justify-between backdrop-blur-xl rounded-xl">
       {sections.map((sec, index) => (
         <a
           key={index}
-          href={`#sec${index+1}`}
+          href={`#sec${index + 1}`}
           className={`sm:text-[18px] font-extralight p-2 transition-transform origin-left duration-250 ease-in-out ${
             visibleSec === index && animationEnabled
               ? " scale-120 text-gray-50"

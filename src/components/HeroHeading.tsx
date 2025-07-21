@@ -1,5 +1,3 @@
-import React from "react";
-import { CiLocationArrow1 } from "react-icons/ci";
 import { GoLocation } from "react-icons/go";
 
 function HeroHeading() {
