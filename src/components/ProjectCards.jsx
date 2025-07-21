@@ -24,13 +24,13 @@ const ProjectCards = ({ username, repoName }) => {
           <Chips key={lang} content={lang} />
         ))}
       </div>
-      <p className="text-neutral-500">{repo.description}</p>
+      <p className="text-neutral-500 line-clamp-4">{repo.description}</p>
       {repo.homepage && (
         <a
           href={repo.homepage}
           className="text-[#ffffff90] flex items-center gap-2 w-fit"
         >
-          vist the website
+          visit the website
           <MdArrowOutward />
         </a>
       )}

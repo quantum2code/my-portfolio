@@ -5,11 +5,12 @@ import BottomSection from "./components/BottomSection";
 import Chips from "./components/Chips";
 import { chipsConstructor } from "./utils/chipsConstructor";
 import ProjectCards from "./components/ProjectCards";
+import SubCard from "./components/SubCard";
 
 // const mobileSceenLogic = "[@media(min-height:650px)]";
 const techStackObj = {
   lang: ["javascript", "typescript", "Python"],
-  library: ["React.js", "express.js", "motion", "drizzle"],
+  library: ["React.js", "express.js", "motion", "drizzle", "PostgreSQL"],
   utils: ["Vim", "Linux"],
 };
 
@@ -56,7 +57,10 @@ function App() {
               hideChips={false}
               addChips={chipsConstructor(techStackObj.lang)}
               addJSX={
-                <div className="grid m-2 gap-2">
+                <div className="grid gap-2">
+                  <div className="flex flex-wrap gap-2">
+                    {chipsConstructor(techStackObj.lang)}
+                  </div>
                   <div className="flex flex-wrap gap-2">
                     {chipsConstructor(techStackObj.library)}
                   </div>
@@ -84,15 +88,13 @@ function App() {
               title={"Projects"}
               addJSX={
                 <div className="flex flex-col gap-3 items-center justify-center">
-                  <div className="flex flex-col gap-4 w-full pl-7 pt-6 pr-5 pb-5">
-                    {repoNameArr.map((repoName) => (
-                      <ProjectCards
-                        key={repoName}
-                        username={USERNAME}
-                        repoName={repoName}
-                      />
-                    ))}
-                  </div>
+                  {repoNameArr.map((repoName) => (
+                    <ProjectCards
+                      key={repoName}
+                      username={USERNAME}
+                      repoName={repoName}
+                    />
+                  ))}
                 </div>
               }
             />
@@ -102,14 +104,7 @@ function App() {
             ref={(el) => (sectionRefs.current[2] = el)}
             className="flex flex-col gap-[23px]"
           >
-            <Card
-              title={"Experiences"}
-              addJSX={
-                <div className="h-[7rem] flex items-center justify-center text-gray-600">
-                  Wow so empty...
-                </div>
-              }
-            />
+            <Card title={"Experiences"} addJSX={<SubCard />} />
           </div>
           <div className="h-[10rem] text-gray-600 flex items-center justify-center">
             {":)"}
