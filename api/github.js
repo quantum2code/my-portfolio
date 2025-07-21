@@ -2,6 +2,7 @@ import axios from "axios";
 
 export default async function handler(req, res) {
   const token = process.env.GITHUB_TOKEN;
+  const { path } = req.query;
 
   try {
     const github = axios.create({
@@ -13,7 +14,7 @@ export default async function handler(req, res) {
       },
     });
 
-    const response = await github.get("/user"); // or /repos, etc.
+    const response = await github.get(`/${path}`); // or /repos, etc.
     res.status(200).json(response.data);
   } catch (err) {
     console.error("GitHub API error:", err?.response?.data || err.message);

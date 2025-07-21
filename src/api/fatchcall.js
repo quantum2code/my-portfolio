@@ -2,7 +2,9 @@ import axios from "axios";
 
 export const fetchRepoDetails = async (username, repoName) => {
   try {
-    const { data } = await axios.get(`/repos/${username}/${repoName}`);
+    const { data } = await axios.get(
+      `/api/github?path=repos/${username}/${repoName}`
+    );
     return {
       name: data.name,
       description: data.description,
@@ -17,7 +19,7 @@ export const fetchRepoDetails = async (username, repoName) => {
 export const fetchRepoLanguages = async (username, repoName) => {
   try {
     const { data } = await axios.get(
-      `/repos/${username}/${repoName}/languages`
+      `/api/github?path=repos/${username}/${repoName}/languages`
     );
     return Object.keys(data);
   } catch (e) {
