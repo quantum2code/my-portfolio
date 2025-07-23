@@ -9,7 +9,7 @@ function Card({ title, content, hideTitle, hideContent, addJSX = null }) {
       <p hidden={hideContent} className="p-1 pt-0 text-gray-300">
         {content}
       </p>
-      <div className="flex flex-col gap-4 w-full pl-7 pt-6 pr-5 pb-5">
+      <div className="flex flex-col gap-4 w-full pl-2 sm:pl-7 pt-6 pr-2 sm:pr-5 pb-5">
         {addJSX}
       </div>
     </div>
