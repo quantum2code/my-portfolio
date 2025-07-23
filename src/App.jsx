@@ -15,7 +15,12 @@ const techStackObj = {
 };
 
 const USERNAME = "quantum2code";
-const repoNameArr = ["game_launcher", "express-jwt-auth", "DiceRoller"];
+const repoNameArr = [
+  "game_launcher",
+  "express-jwt-auth",
+  "good_speech",
+  "DiceRoller",
+];
 
 function App() {
   const sectionRefs = useRef([]);

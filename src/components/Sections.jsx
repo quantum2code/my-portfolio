@@ -35,7 +35,7 @@ function Sections({ sectionRefs, animationEnabled = true }) {
   }, [sectionRefs]);
 
   return (
-    <div className="w-[95%] fixed left-1/2 translate-x-[-50%] sm:translate-x-0 top-3 sm:static flex sm:flex-col  justify-between sm:px-0 px-3 sm:h-[11rem] backdrop-blur-xl sm:backdrop-blur-0 rounded-xl">
+    <div className="w-[95%] fixed left-1/2 translate-x-[-50%] sm:translate-x-0 top-3 sm:static flex sm:flex-col  justify-between sm:px-0 px-3 sm:h-[11rem] backdrop-blur-xl sm:backdrop-blur-0 rounded-xl z-100">
       {sections.map((sec, index) => (
         <a
           key={index}
